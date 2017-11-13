@@ -48,7 +48,7 @@ make && make install
 
 cd /tmp/build-nginx/ && \
     git clone https://github.com/SpiderLabs/ModSecurity-nginx
-    
+
 
 ##### Download nginx stable version ######
 # NGINX_STABLE_VERSION=1.12.2
@@ -100,7 +100,7 @@ cd /tmp/build-nginx/nginx-${NGINX_STABLE_VERSION}/
     --with-http_ssl_module \
     --with-stream \
     --with-mail=dynamic \
-    --add-module=/opt/ModSecurity-nginx
+    --add-module=/tmp/build-nginx/ModSecurity-nginx
 
 make && make install
 
@@ -111,6 +111,7 @@ rm -rf /etc/nginx
 # tar xzf /tmp/build-nginx/nginx-config.tgz -C /etc/
 
 mkdir -pv /var/www/html
+mkdir -pv /var/cache/nginx/client_temp
 
 # cleaning
 DEBIAN_FRONTEND=noninteractive \
@@ -123,6 +124,7 @@ apt-get purge --auto-remove -y wget -q \
     libxml2-dev \
     libgd-dev \
     libgd2-xpm-dev \
-    libgeoip-dev
+    libgeoip-dev \
+    build-essential
 
 rm -rf /tmp/* /var/tmp/*
