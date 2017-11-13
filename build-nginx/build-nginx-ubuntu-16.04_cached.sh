@@ -14,6 +14,7 @@ apt-get install -y build-essential \
     libxml2 libpcre++-dev \
     libxml2-dev libpcre3-dev \
     git wget
+    
 mkdir -pv /tmp/build-nginx/
 ### Install library require for building nginx ###
 #Install PCRE library
