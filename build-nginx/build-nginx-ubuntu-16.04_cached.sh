@@ -126,7 +126,6 @@ apt-get purge --auto-remove -y wget -q \
     libxml2-dev \
     libgd-dev \
     libgd2-xpm-dev \
-    libgeoip-dev \
     build-essential
 
 rm -rf /tmp/* /var/tmp/*
