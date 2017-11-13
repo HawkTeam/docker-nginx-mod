@@ -1,4 +1,3 @@
-# Author: Cuong Tran
 # Date: 2017-11-11
 #
 # Build:
@@ -9,7 +8,7 @@
 #
 
 FROM ubuntu:16.04
-MAINTAINER Cuong Tran "tatdat171@gmail.com"
+MAINTAINER HackingTeam "tatdat171@gmail.com"
 
 RUN apt-get update -qq
 
