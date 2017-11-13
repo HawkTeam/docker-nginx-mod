@@ -17,9 +17,9 @@ RUN DEBIAN_FRONTEND=noninteractive bash /build-nginx.sh \
     && rm /build-nginx.sh
 
 ###install let's enscrypt
-RUN apt-get install software-properties-common python-software-properties
-RUN add-apt-repository ppa:certbot/certbot && apt-get update
-RUN apt-get install -y python-certbot-nginx
+#RUN apt-get install software-properties-common python-software-properties
+#RUN add-apt-repository ppa:certbot/certbot -y && apt-get update
+#RUN apt-get install -y python-certbot-nginx
 
 # Make utf-8 enabled by default
 ENV LANG en_US.utf8
