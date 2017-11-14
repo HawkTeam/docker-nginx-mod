@@ -77,7 +77,6 @@ cd /tmp/build-nginx/nginx-${NGINX_STABLE_VERSION}/
     --http-scgi-temp-path=/var/cache/nginx/scgi_temp \
     --user=nginx \
     --group=nginx \
-    --with-http_ssl_module \
     --with-http_realip_module \
     --with-http_addition_module \
     --with-http_sub_module \
@@ -101,6 +100,8 @@ cd /tmp/build-nginx/nginx-${NGINX_STABLE_VERSION}/
     --with-http_ssl_module \
     --with-stream \
     --with-mail=dynamic \
+    --with-pcre=/tmp/build-nginx/pcre-8.41 \
+    --with-zlib=/tmp/build-nginx/zlib-1.2.11 \
     --add-module=/tmp/build-nginx/ModSecurity-nginx
 
 make && make install
@@ -125,7 +126,6 @@ apt-get purge --auto-remove -y wget -q \
     libxml2-dev \
     libgd-dev \
     libgd2-xpm-dev \
-    libgeoip-dev \
     build-essential
 
 rm -rf /tmp/* /var/tmp/*
